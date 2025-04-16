@@ -1,0 +1,32 @@
+<!--pages/game/game.wxml-->
+<view class="container">
+  <view class="game-header">
+    <view class="back-btn" bindtap="goBack">返回</view>
+    <view class="timer">{{timeLeft}}秒</view>
+    <view class="pause-btn" bindtap="togglePause">{{isPaused ? '继续' : '暂停'}}</view>
+  </view>
+  
+  <view class="game-stats">
+    <view class="stat-item">
+      <text class="stat-label">正确:</text>
+      <text class="stat-value">{{correctCount}}</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-label">跳过:</text>
+      <text class="stat-value">{{skipCount}}</text>
+    </view>
+  </view>
+  
+  <view class="word-container">
+    <view class="word">{{currentWord}}</view>
+  </view>
+  
+  <view class="action-area">
+    <view class="correct-area" bindtap="handleCorrect">
+      <view class="action-text">猜对</view>
+    </view>
+    <view class="skip-area" bindtap="handleSkip">
+      <view class="action-text">跳过</view>
+    </view>
+  </view>
+</view>

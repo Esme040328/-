@@ -1,0 +1,53 @@
+<!--settings.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="back-btn" bindtap="goBack">返回</view>
+    <view class="title">游戏设置</view>
+  </view>
+  
+  <view class="card">
+    <view class="card-title">游戏时长</view>
+    <view class="slider-container">
+      <slider min="30" max="90" step="30" value="{{gameDuration}}" activeColor="#3498db" block-size="28" show-value bindchange="setGameDuration"/>
+      <view class="slider-labels">
+        <text>30秒</text>
+        <text>60秒</text>
+        <text>90秒</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="card">
+    <view class="card-title">词库选择</view>
+    <view class="option-group">
+      <view wx:for="{{wordLibraries}}" wx:key="id" 
+            class="option-item {{item.checked ? 'option-selected' : ''}}" 
+            bindtap="selectWordLibrary" 
+            data-id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+  
+  <view class="card">
+    <view class="card-title">难度设置</view>
+    <view class="option-group">
+      <view wx:for="{{difficulty}}" wx:key="id" 
+            class="option-item {{item.checked ? 'option-selected' : ''}}" 
+            bindtap="selectDifficulty" 
+            data-id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+  
+  <view class="card">
+    <view class="card-title">音效设置</view>
+    <view class="switch-container">
+      <text>游戏音效</text>
+      <switch checked="{{soundEnabled}}" bindchange="toggleSound" color="#3498db"/>
+    </view>
+  </view>
+  
+  <view class="btn btn-primary" bindtap="saveSettings">保存设置</view>
+</view> 

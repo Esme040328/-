@@ -1,0 +1,41 @@
+<!--pages/team/team.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="back-btn" bindtap="goBack">返回</view>
+    <view class="title">组队</view>
+  </view>
+  
+  <view class="card">
+    <view class="card-title">玩家数量</view>
+    <view class="slider-container">
+      <slider min="2" max="8" step="1" value="{{playerCount}}" activeColor="#3498db" block-size="28" show-value bindchange="changePlayerCount"/>
+      <view class="slider-value">{{playerCount}}人</view>
+    </view>
+  </view>
+  
+  <view class="card">
+    <view class="card-title">玩家名称</view>
+    <view class="player-list">
+      <view class="player-item" wx:for="{{players}}" wx:key="id">
+        <text class="player-number">{{index + 1}}</text>
+        <input class="player-name" value="{{item.name}}" bindinput="updatePlayerName" data-index="{{index}}" placeholder="请输入玩家名称"/>
+      </view>
+    </view>
+  </view>
+  
+  <view class="team-container" wx:if="{{teams[0].members.length > 0}}">
+    <view class="team-card" wx:for="{{teams}}" wx:key="id">
+      <view class="team-title">{{item.name}}</view>
+      <view class="team-members">
+        <view class="team-member" wx:for="{{item.members}}" wx:for-item="member" wx:key="id">
+          {{member.name}}
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="btn-group">
+    <view class="btn btn-secondary" bindtap="randomizeTeams">随机分队</view>
+    <view class="btn btn-primary" bindtap="startGame">开始游戏</view>
+  </view>
+</view>

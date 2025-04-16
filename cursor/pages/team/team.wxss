@@ -1,0 +1,110 @@
+/* pages/team/team.wxss */
+.container {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 30rpx 0;
+  margin-bottom: 20rpx;
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.back-btn {
+  position: absolute;
+  left: 30rpx;
+  top: 30rpx;
+  font-size: 32rpx;
+  color: #3498db;
+}
+
+.slider-container {
+  padding: 0 10rpx;
+}
+
+.slider-value {
+  text-align: center;
+  margin-top: 10rpx;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.player-list {
+  width: 100%;
+}
+
+.player-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.player-number {
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background-color: #3498db;
+  color: white;
+  border-radius: 25rpx;
+  margin-right: 20rpx;
+}
+
+.player-name {
+  flex: 1;
+  height: 70rpx;
+  border-bottom: 1px solid #ddd;
+  padding: 0 10rpx;
+}
+
+.team-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx 0;
+}
+
+.team-card {
+  width: 47%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.team-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20rpx;
+  color: #3498db;
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-member {
+  padding: 10rpx 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.btn-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30rpx;
+}

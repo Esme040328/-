@@ -1,0 +1,82 @@
+/* settings.wxss */
+.container {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 30rpx 0;
+  margin-bottom: 20rpx;
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.back-btn {
+  position: absolute;
+  left: 30rpx;
+  top: 30rpx;
+  font-size: 32rpx;
+  color: #3498db;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin: 20rpx 0;
+  width: 85%;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+
+.slider-container {
+  padding: 0 10rpx;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+  color: #999;
+}
+
+.option-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.option-item {
+  width: 30%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.option-selected {
+  background-color: #3498db;
+  color: white;
+}
+
+.switch-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 

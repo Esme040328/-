@@ -1,0 +1,17 @@
+<!--pages/prepare/prepare.wxml-->
+<view class="container">
+  <view class="prepare-title">游戏即将开始</view>
+  
+  <view class="player-info">
+    <text>当前玩家: {{currentPlayer.name}}</text>
+  </view>
+  
+  <view class="countdown {{ready ? 'ready' : ''}}">
+    {{countDown}}
+  </view>
+  
+  <view class="rule-tips">
+    <view>猜对词语 - 点击左侧区域</view>
+    <view>跳过词语 - 点击右侧区域</view>
+  </view>
+</view>
